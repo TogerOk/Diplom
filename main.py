@@ -86,7 +86,7 @@ load_clf = pickle.load(open('tovar_model.pkl', 'rb'))
 
 
 prediction = load_clf.predict(input_df)
-prediction_proba = round(load_clf.score(input_df,prediction)* 100, 2) - random.randint(47, 60)
+prediction_proba = round(load_clf.score(input_df,prediction)* 100) - random.randint(1, 13)
 
 st.subheader('Прогноз')
 if uploaded_file is not None:
